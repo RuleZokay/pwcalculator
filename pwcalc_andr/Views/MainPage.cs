@@ -8,12 +8,13 @@ namespace pwcalc_andr
     {
         public MainPage()
         {
-            Page itemsPage, aboutPage = null;
+            Page pwcalcPage = null; 
+            Page aboutPage = null;
 
             switch (Device.RuntimePlatform)
             {
                 case Device.iOS:
-                    itemsPage = new NavigationPage(new ItemsPage())
+                    pwcalcPage = new NavigationPage(new PwCalcPage())
                     {
                         Title = "Browse"
                     };
@@ -22,13 +23,13 @@ namespace pwcalc_andr
                     {
                         Title = "About"
                     };
-                    itemsPage.Icon = "tab_feed.png";
+                    pwcalcPage.Icon = "tab_feed.png";
                     aboutPage.Icon = "tab_about.png";
                     break;
                 default:
-                    itemsPage = new ItemsPage()
+                    pwcalcPage = new PwCalcPage()
                     {
-                        Title = "Browse"
+                        Title = "Passwort-Calc"
                     };
 
                     aboutPage = new AboutPage()
@@ -38,7 +39,7 @@ namespace pwcalc_andr
                     break;
             }
 
-            Children.Add(itemsPage);
+            Children.Add(pwcalcPage);
             Children.Add(aboutPage);
 
             Title = Children[0].Title;
