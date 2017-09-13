@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="pwcalc_andr.App">
 	<Application.Resources>
 		<ResourceDictionary>
@@ -9,9 +9,10 @@
 			<Color x:Key="DarkBackgroundColor">#C0C0C0</Color>
 			<Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
 			<Color x:Key="LightTextColor">#999999</Color>
+  
 			<Style TargetType="NavigationPage">
 				<Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
-				<Setter Property="BarTextColor" Value="White" />
+				<Setter Property="BarTextColor" Value="Black" />
 			</Style>
 		</ResourceDictionary>
 	</Application.Resources>

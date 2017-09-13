@@ -9,38 +9,37 @@ namespace pwcalc_andr
         public MainPage()
         {
             Page pwcalcPage = null; 
-            Page aboutPage = null;
+            Page unlockPage = null;
 
             switch (Device.RuntimePlatform)
             {
                 case Device.iOS:
                     pwcalcPage = new NavigationPage(new PwCalcPage())
                     {
-                        Title = "Password-Calc"
+                        Title = "Password-Calculator"
                     };
 
-                    aboutPage = new NavigationPage(new AboutPage())
-                    {
-                        Title = "About"
+                    unlockPage = new NavigationPage(new UnlockPage())                {
+                        Title = "Unlock App"
                     };
                     pwcalcPage.Icon = "tab_feed.png";
-                    aboutPage.Icon = "tab_about.png";
+                    unlockPage.Icon = "tab_about.png";
                     break;
                 default:
                     pwcalcPage = new PwCalcPage()
                     {
-                        Title = "Password-Calc"
+                        Title = "Password-Calculator"
                     };
 
-                    aboutPage = new AboutPage()
+                    unlockPage = new UnlockPage()
                     {
-                        Title = "About"
+                        Title = "Unlock App"
                     };
                     break;
             }
 
             Children.Add(pwcalcPage);
-            Children.Add(aboutPage);
+            Children.Add(unlockPage);
 
             Title = Children[0].Title;
         }
