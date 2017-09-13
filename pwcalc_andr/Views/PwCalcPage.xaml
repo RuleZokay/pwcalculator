@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="pwcalc_andr.PwCalcPage">
 	<ContentPage.Content>
-       <StackLayout Padding = "20,20,20,20">
+       <StackLayout Padding = "30,30,30,30">
             <Label Text="Eingabe" XAlign="Center" ></Label>
             <Entry Placeholder="Bitte Nummer eingeben" HorizontalTextAlignment ="Center" x:Name="TextBoxNumber" Keyboard="Numeric"></Entry>
             <Button Text="Berechnen" x:Name="ButtonCalc" Clicked="Berechnen_Click"></Button>

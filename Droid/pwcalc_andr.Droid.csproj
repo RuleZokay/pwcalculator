@@ -138,6 +138,14 @@
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\drawable\close2.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\close2.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\close2.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\close2.png" />
+    <AndroidResource Include="Resources\drawable\checked.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\checked.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\checked.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\checked.png" />
   </ItemGroup>
   <Import Project="..\pwcalc_andr\pwcalc_andr.projitems" Label="Shared" Condition="Exists('..\pwcalc_andr\pwcalc_andr.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

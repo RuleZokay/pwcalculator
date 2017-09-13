@@ -11,6 +11,9 @@ namespace pwcalc_andr
         
         public PwCalcPage()
         {
+
+			
+
          InitializeComponent();
         }
 
@@ -23,7 +26,7 @@ namespace pwcalc_andr
 
         private void Berechnen_Click(object sender, EventArgs args)
 		{
-            TextBoxPassword.Text = GetPassword();
+            TextBoxPassword.Text = GetPassword();	
 		}
 
 		public string GetPassword()

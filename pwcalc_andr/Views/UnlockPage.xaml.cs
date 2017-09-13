@@ -11,9 +11,16 @@ namespace pwcalc_andr
         
         public UnlockPage()
         {
-         InitializeComponent();
+            
+            InitializeComponent();
+        
         }
 
+		private void unlock_Click(object sender, EventArgs args)
+		{
+            CrossImage.Source = "checked.png";
+            ImageText.Text = "Die App ist freigeschaltet!";
+		}
 
 
 		
