@@ -16,7 +16,7 @@ namespace pwcalc_andr
                 case Device.iOS:
                     pwcalcPage = new NavigationPage(new PwCalcPage())
                     {
-                        Title = "Browse"
+                        Title = "Password-Calc"
                     };
 
                     aboutPage = new NavigationPage(new AboutPage())
@@ -29,7 +29,7 @@ namespace pwcalc_andr
                 default:
                     pwcalcPage = new PwCalcPage()
                     {
-                        Title = "Passwort-Calc"
+                        Title = "Password-Calc"
                     };
 
                     aboutPage = new AboutPage()
