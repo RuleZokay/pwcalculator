@@ -6,7 +6,7 @@
         
        <StackLayout  Padding = "30,30,30,30" HorizontalOptions="Center">
             <Label Text="E-Mail" XAlign="Center"></Label>
-            <Entry Placeholder="Bitte E-Mail eingeben" HorizontalTextAlignment="Center" Keyboard="Email"></Entry>
+            <Entry x:Name="TextBoxMail" Placeholder="Bitte E-Mail eingeben" HorizontalTextAlignment="Center" Keyboard="Email"></Entry>
             <Button Text ="App Freischalten" Clicked="unlock_Click"></Button>
        <Grid Padding="0,20,0,0" VerticalOptions="Center">
        <Grid.ColumnDefinitions>

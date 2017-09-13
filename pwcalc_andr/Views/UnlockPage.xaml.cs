@@ -8,7 +8,7 @@ namespace pwcalc_andr
 {
     public partial class UnlockPage : ContentPage
     {
-        
+        public Droid.WebService webservice = new Droid.WebService();
         public UnlockPage()
         {
             
@@ -18,9 +18,14 @@ namespace pwcalc_andr
 
 		private void unlock_Click(object sender, EventArgs args)
 		{
-            CrossImage.Source = "checked.png";
-            ImageText.Text = "Die App ist freigeschaltet!";
+            //CrossImage.Source = "checked.png";
+            //ImageText.Text = "Die App ist freigeschaltet!"
+            String usermail = TextBoxMail.Text;
+            webservice.giveUserMail(usermail);
+            webservice.getWebPin();
+
 		}
+
 
 
 		
