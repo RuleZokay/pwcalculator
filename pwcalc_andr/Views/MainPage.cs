@@ -19,7 +19,7 @@ namespace pwcalc_andr
                         Title = "Password-Calculator"
                     };
 
-                    unlockPage = new NavigationPage(new UnlockPage())                {
+                    unlockPage = new NavigationPage(new UnlockPage()){
                         Title = "Unlock App"
                     };
                     pwcalcPage.Icon = "tab_feed.png";

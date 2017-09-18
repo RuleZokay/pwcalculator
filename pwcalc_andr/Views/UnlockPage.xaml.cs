@@ -1,6 +1,5 @@
 ﻿using System;
-
-
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 
@@ -8,6 +7,7 @@ namespace pwcalc_andr
 {
     public partial class UnlockPage : ContentPage
     {
+        public String usermail;
         public Droid.WebService webservice = new Droid.WebService();
         public UnlockPage()
         {
@@ -20,9 +20,10 @@ namespace pwcalc_andr
 		{
             //CrossImage.Source = "checked.png";
             //ImageText.Text = "Die App ist freigeschaltet!"
-            String usermail = TextBoxMail.Text;
-            webservice.giveUserMail(usermail);
-            webservice.getWebPin();
+            usermail = TextBoxMail.Text;
+            webservice.Usermail = usermail;
+            Console.WriteLine("Antwort vom Webservice (PIN): " + webservice.getWebPin()); 
+
 
 		}
 
