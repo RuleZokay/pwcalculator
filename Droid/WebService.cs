@@ -12,57 +12,42 @@ namespace pwcalc_andr.Droid
         public string usermail = "N/A";
         //Register: Method put : http://de-sg-t2t.technotrans.lan:1903/app/pwcalc/register/<app_id>/schroeder@technotrans.de
         //Isvalid: Method get: http://de-sg-t2t.technotrans.lan:1903/app/pwcalc/isvalid/<app_id>/<app_pin>
+        string reply = "";
+        string username = "test";
+        string password = "test";
+        String resultpin = "";
+        public String getWebPin()
+        {
+            {
 
-        public String getWebPin(){
+            UnlockPage SecondPage = new UnlockPage();
 
-			UnlockPage SecondPage = new UnlockPage();
 
-			string userName = "test";
-			string passWord = "test";
 
-			string webpin = "";
-			string email = Usermail;
+            System.Net.ServicePointManager.DefaultConnectionLimit = 100;
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
 
-			string url = "https://ws.technotrans.de/app/pwcalc/register/" + "1234567890123456/" + email; // Just a sample url
+            WebClient wc = new WebClient();
+            wc.UseDefaultCredentials = true;
 
-			using (var wc = new System.Net.WebClient())
-			{
-				
-				Console.WriteLine("Dies ist die URL zum Webservice: " + url);
+            string credentials = Convert.ToBase64String(
+            Encoding.ASCII.GetBytes(username + ":" + password));
+            wc.Headers[HttpRequestHeader.Authorization] = string.Format(
+            "Basic {0}", credentials);
 
-				wc.Headers.Add(HttpRequestHeader.ContentType, "application/json");
+            wc.Headers[HttpRequestHeader.ContentType] = "application/json";
+            string url = "https://ws.technotrans.de/app/pwcalc/register/123456789/jonathanios@technotrans.de";
 
-				string credentials = Convert.ToBase64String(
-					Encoding.ASCII.GetBytes(userName + ":" + passWord));
-				wc.Headers[HttpRequestHeader.Authorization] = string.Format(
-					"Basic {0}", credentials);
-                
-				ServicePointManager.ServerCertificateValidationCallback += ValidateRemoteCertificate;
-				ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            resultpin = wc.UploadString(url, "Put", "");
 
-				string responseString = wc.UploadString(url, "PUT", "");
+            System.Console.WriteLine("Antwort vom Webservice: " + resultpin);
 
-				webpin = responseString;
-			}
+            wc.Dispose();
+        }
 
-   //         WebClient wc = new WebClient();
-
-			//Console.WriteLine("Dies ist die URL zum Webservice: " + url);
-
-   //         wc.Headers.Add(HttpRequestHeader.ContentType,"application/json");
-
-			//string credentials = Convert.ToBase64String(
-			//	Encoding.ASCII.GetBytes(userName + ":" + passWord));
-			//wc.Headers[HttpRequestHeader.Authorization] = string.Format(
-			//	"Basic {0}", credentials);
-
-			//ServicePointManager.ServerCertificateValidationCallback += ValidateRemoteCertificate;
-			//ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-
-   //         string responseString = wc.UploadString(url, "PUT", "");
-			//webpin = responseString;
-
-            return webpin;
+        return resultpin;
+    
         }
 
         public String getValidation(){
@@ -73,8 +58,10 @@ namespace pwcalc_andr.Droid
 
             WebClient wc = new WebClient();
 
-            ServicePointManager.ServerCertificateValidationCallback += ValidateRemoteCertificate;
+
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
+
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
 
             validate = wc.DownloadString(url);
 
@@ -83,34 +70,21 @@ namespace pwcalc_andr.Droid
             return validate; 
         }
 
-		public string Usermail
-		{
-			get
-			{
-				return usermail;
-			}
+        public string Usermail
+        {
+            get
+            {
+                return usermail;
+            }
 
-			set
-			{
+            set
+            {
                 usermail = value;
-			}
-		}
+            }
+        }
 
-		private static bool ValidateRemoteCertificate(object sender, X509Certificate cert, X509Chain chain, SslPolicyErrors error)
-		{
-			// If the certificate is a valid, signed certificate, return true.
-			if (error == System.Net.Security.SslPolicyErrors.None)
-			{
-				return true;
-			}
-
-			Console.WriteLine("X509Certificate [{0}] Policy Error: '{1}'",
-				cert.Subject,
-				error.ToString());
-
-			return false;
-		}
+        
 
 
-	}
+    }
 }

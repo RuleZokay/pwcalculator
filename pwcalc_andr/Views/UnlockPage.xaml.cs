@@ -24,7 +24,6 @@ namespace pwcalc_andr
             webservice.Usermail = usermail;
             Console.WriteLine("Antwort vom Webservice (PIN): " + webservice.getWebPin()); 
 
-
 		}
 
 
