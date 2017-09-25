@@ -7,12 +7,18 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.Net;
+using System.Text;
 
 namespace pwcalc_andr.Droid
 {
     [Activity(Label = "pwcalc_andr.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        public string username = "test";
+        public string password = "test";
+        public string resultpin = "";
+
         protected override void OnCreate(Bundle bundle)
         {
             //TabLayoutResource = Resource.Layout.Tabbar;
@@ -22,6 +28,7 @@ namespace pwcalc_andr.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
             LoadApplication(new App());
         }
 
@@ -29,5 +36,10 @@ namespace pwcalc_andr.Droid
         {
             base.OnActivityResult(requestCode, resultCode, data);
         }
+
+
+
     }
 }
+
+

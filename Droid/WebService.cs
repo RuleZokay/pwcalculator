@@ -12,17 +12,16 @@ namespace pwcalc_andr.Droid
         public string usermail = "N/A";
         //Register: Method put : http://de-sg-t2t.technotrans.lan:1903/app/pwcalc/register/<app_id>/schroeder@technotrans.de
         //Isvalid: Method get: http://de-sg-t2t.technotrans.lan:1903/app/pwcalc/isvalid/<app_id>/<app_pin>
-        string reply = "";
-        string username = "test";
-        string password = "test";
-        String resultpin = "";
-        public String getWebPin()
+
+        public static string username = "test";
+        public static string password = "test";
+        public static String resultpin = "";
+
+        public async Task<string> getWebPin()
         {
             {
 
-            UnlockPage SecondPage = new UnlockPage();
-
-
+            //UnlockPage SecondPage = new UnlockPage();
 
             System.Net.ServicePointManager.DefaultConnectionLimit = 100;
             System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
@@ -37,30 +36,27 @@ namespace pwcalc_andr.Droid
             "Basic {0}", credentials);
 
             wc.Headers[HttpRequestHeader.ContentType] = "application/json";
-            string url = "https://ws.technotrans.de/app/pwcalc/register/123456789/jonathanios@technotrans.de";
+                string url = "https://ws.technotrans.de/app/pwcalc/register/8234567890123456/" + Usermail ;
 
-            resultpin = wc.UploadString(url, "Put", "");
-
-            System.Console.WriteLine("Antwort vom Webservice: " + resultpin);
+                resultpin = await wc.UploadStringTaskAsync(url,"Put","");
 
             wc.Dispose();
         }
-
-        return resultpin;
+            return resultpin;
+        
     
         }
 
-        public String getValidation(){
+        public String getValidation(String webpin){
             UnlockPage SecondPage = new UnlockPage();
 
             string validate = "";
-            string url = "https://de-sg-t2t.technotrans.lan/app/pwcalc/isvalid/1234567890123456/" + getWebPin();
+            string url = "https://ws.technotrans.de/app/pwcalc/isvalid/8234567890123456/"+webpin;
 
             WebClient wc = new WebClient();
 
-
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
-
+            System.Net.ServicePointManager.DefaultConnectionLimit = 100;
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
 
             validate = wc.DownloadString(url);
