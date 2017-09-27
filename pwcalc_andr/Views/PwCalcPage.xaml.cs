@@ -1,22 +1,21 @@
 ﻿using System;
-
-
+using Android.Content;
 using Xamarin.Forms;
 
 
 namespace pwcalc_andr
 {
+    
     public partial class PwCalcPage : ContentPage
     {
         
+       
         public PwCalcPage()
         {
-
 			
-
          InitializeComponent();
-        }
 
+        }
 
 		public string InputText
         {
@@ -39,14 +38,16 @@ namespace pwcalc_andr
 
 			}
 
+
             else{
-                
             return TextBoxPassword.Text = "Bitte eine Zahl eingeben!!!";
 			}
 
          }
 
-
-
+        public void enableAllObjects(){
+		    TextBoxNumber.IsEnabled = true;
+		    ButtonCalc.IsEnabled = true;
+		}
     }
 }

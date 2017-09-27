@@ -131,6 +131,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="WebService.cs" />
     <Compile Include="Validation.cs" />
+    <Compile Include="AppPreferences.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png" />

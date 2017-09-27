@@ -61,8 +61,6 @@ namespace pwcalc_andr.Droid
 
             validate = wc.DownloadString(url);
 
-            Console.WriteLine("Ist der User freigeschaltet: " + validate);
-
             return validate; 
         }
 
