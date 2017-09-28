@@ -16,7 +16,7 @@
 
         <Label x:Name="ImageText" YAlign="Center" Text= "Die App ist nicht freigeschaltet"  Grid.Column ="1"></Label>
        </Grid>
-            <Label x:Name="RequestText" IsVisible = "false" Margin = "0,80,0,0"  Text= "**Ihre Anfrage wurde gesendet. Bitte warten Sie auf die Freischaltung durch die IT. Versuchen sie es später erneut "></Label>
+            <Label x:Name="RequestText" IsVisible = "false" Margin = "0,80,0,0"  Text= "**Ihre Anfrage wurde gesendet. Bitte warten Sie auf die Freischaltung durch die IT. Versuchen Sie es später erneut..."></Label>
        </StackLayout>
             
 

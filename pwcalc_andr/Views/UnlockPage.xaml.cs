@@ -17,8 +17,23 @@ namespace pwcalc_andr
         public UnlockPage()
         {
             InitializeComponent();
-        
-        }
+			Context mContext = Android.App.Application.Context;
+			Droid.AppPreferences preferences = new Droid.AppPreferences(mContext);
+            if (preferences.getFirstRegister().Equals("true")){
+                TextBoxMail.Text = preferences.getUserEmail();
+                TextBoxMail.IsEnabled = false;
+            }
+			if (preferences.getAppUnlocked().Equals("true"))
+			{
+                TextBoxMail.Text = preferences.getUserEmail();
+                CrossImage.Source = "checked.png";
+				ImageText.Text = "Die App ist freigeschaltet!";
+				RequestText.IsVisible = false;
+				
+			}
+
+
+		}
 
         private async void unlock_Click(object sender, EventArgs args)
         {
@@ -37,7 +52,7 @@ namespace pwcalc_andr
                 Console.WriteLine("Wurde die App schon einmal registriert:" + preferences.getFirstRegister());
                 if (!(preferences.getFirstRegister().Equals("true"))){
                     preferences.saveUserEmail(usermail);
-					
+					TextBoxMail.IsEnabled = false;
                     webpin = await webservice.getWebPin();
 					Console.WriteLine("Antwort vom Webservice: " + webpin);
                     unlocked = webservice.getValidation(webpin);
@@ -58,7 +73,7 @@ namespace pwcalc_andr
 
                 if(unlocked.Equals("true")){
                     preferences.saveAppUnlocked("true");
-                    pwcalcpage.EnableAllObjects();
+
                     EnableAllObjects();
                 }
 

@@ -14,9 +14,25 @@ namespace pwcalc_andr
        
         public PwCalcPage()
         {
-            
          InitializeComponent();
-         
+
+		Context mContext = Android.App.Application.Context;
+		Droid.AppPreferences preferences = new Droid.AppPreferences(mContext);
+            Droid.WebService webservice = new Droid.WebService();
+
+            string webpin = "";
+            if (preferences.getFirstRegister().Equals("true")){
+                webpin = preferences.getWebPin();
+
+            }
+
+
+		if (preferences.getAppUnlocked().Equals("true"))
+		{
+                TextBoxNumber.IsEnabled = true;
+                ButtonCalc.IsEnabled = true;
+		}
+
         }
 
 		
