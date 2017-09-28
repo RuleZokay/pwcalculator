@@ -13,6 +13,7 @@ namespace pwcalc_andr.Droid
         private static String PREFERENCE_WEB_PIN = "PREFERENCE_WEB_PIN";
         private static String PREFERENCE_FIRST_REGISTER = "PREFERENCE_FIRST_REGISTER";
         private static String PREFERENCE_APP_UNLOCKED = "PREFERENCE_APP_UNLOCKED";
+        private static String PREFERENCE_USER_EMAIL = "PREFERENCE_USER_EMAIL";
 
         public AppPreferences(Context context)
         {
@@ -20,6 +21,17 @@ namespace pwcalc_andr.Droid
             mSharedPrefs = PreferenceManager.GetDefaultSharedPreferences(mContext);
             mPrefsEditor = mSharedPrefs.Edit();
         }
+
+
+        public void saveUserEmail(string key){
+            mPrefsEditor.PutString(PREFERENCE_USER_EMAIL,key);
+            mPrefsEditor.Commit();
+        }
+
+        public String getUserEmail(){
+            return mSharedPrefs.GetString(PREFERENCE_USER_EMAIL, "");
+        }
+
 
 		public void saveAppUnlocked(string key)
 		{

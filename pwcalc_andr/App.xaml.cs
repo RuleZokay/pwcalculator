@@ -23,5 +23,8 @@ namespace pwcalc_andr
             else
                 MainPage = new NavigationPage(new MainPage());
         }
+
+
+
     }
 }

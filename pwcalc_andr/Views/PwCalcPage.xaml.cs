@@ -1,5 +1,6 @@
 ﻿using System;
 using Android.Content;
+
 using Xamarin.Forms;
 
 
@@ -8,14 +9,17 @@ namespace pwcalc_andr
     
     public partial class PwCalcPage : ContentPage
     {
-        
+       
+
        
         public PwCalcPage()
         {
-			
+            
          InitializeComponent();
-
+         
         }
+
+		
 
 		public string InputText
         {
@@ -45,9 +49,9 @@ namespace pwcalc_andr
 
          }
 
-        public void enableAllObjects(){
-		    TextBoxNumber.IsEnabled = true;
-		    ButtonCalc.IsEnabled = true;
+        public void EnableAllObjects(){
+            TextBoxNumber.IsEnabled = true;
+            ButtonCalc.IsEnabled = true;
 		}
     }
 }

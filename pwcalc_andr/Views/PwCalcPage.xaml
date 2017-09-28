@@ -7,6 +7,7 @@
             <Button Text="Berechnen"  x:FieldModifier = "public" x:Name="ButtonCalc"  IsEnabled="false" Clicked="Berechnen_Click"></Button>
             <Label Text="Passwort" XAlign="Center"></Label>
             <Entry Placeholder="" x:Name="TextBoxPassword" IsEnabled="false" HorizontalTextAlignment ="Center"></Entry>
-       </StackLayout>
+
+        </StackLayout>
 	</ContentPage.Content>
 </ContentPage>

@@ -16,7 +16,6 @@ namespace pwcalc_andr
         String unlocked;
         public UnlockPage()
         {
-            
             InitializeComponent();
         
         }
@@ -34,14 +33,19 @@ namespace pwcalc_andr
                 TextBoxMail.Placeholder = "Email darf nicht leer sein!";
             }
             else{
+                RequestText.IsVisible = true;
                 Console.WriteLine("Wurde die App schon einmal registriert:" + preferences.getFirstRegister());
                 if (!(preferences.getFirstRegister().Equals("true"))){
-					webpin = await webservice.getWebPin();
+                    preferences.saveUserEmail(usermail);
+					
+                    webpin = await webservice.getWebPin();
 					Console.WriteLine("Antwort vom Webservice: " + webpin);
                     unlocked = webservice.getValidation(webpin);
 
                 }
                 else{
+                    TextBoxMail.Text = preferences.getUserEmail();
+                    TextBoxMail.IsEnabled = false;
                     webpin = preferences.getWebPin();
                 }
 				
@@ -53,17 +57,19 @@ namespace pwcalc_andr
                 unlocked = validation.isValid(webpin);
 
                 if(unlocked.Equals("true")){
-                    pwcalcpage.enableAllObjects();
-                    enableAllObjects();
+                    preferences.saveAppUnlocked("true");
+                    pwcalcpage.EnableAllObjects();
+                    EnableAllObjects();
                 }
 
             }
         }
 
-        public void enableAllObjects()
+        public void EnableAllObjects()
         {
 			CrossImage.Source = "checked.png";
             ImageText.Text = "Die App ist freigeschaltet!";
+            RequestText.IsVisible = false;
 		}
 
     }
