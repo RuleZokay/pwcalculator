@@ -9,9 +9,7 @@ namespace pwcalc_andr
     
     public partial class PwCalcPage : ContentPage
     {
-       
-
-       
+      
         public PwCalcPage()
         {
          InitializeComponent();
@@ -35,7 +33,7 @@ namespace pwcalc_andr
 
         }
 
-		
+	    	
 
 		public string InputText
         {

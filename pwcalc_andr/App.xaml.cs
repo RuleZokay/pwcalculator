@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Android.Content;
 using Xamarin.Forms;
 
 namespace pwcalc_andr
@@ -11,7 +11,13 @@ namespace pwcalc_andr
 
         public App()
         {
+
+
+
             InitializeComponent();
+            Context mContext = Android.App.Application.Context;
+            Droid.AppPreferences preferences = new Droid.AppPreferences(mContext);
+
 
             if (UseMockDataStore)
                 DependencyService.Register<MockDataStore>();
@@ -19,12 +25,21 @@ namespace pwcalc_andr
                 DependencyService.Register<CloudDataStore>();
 
             if (Device.RuntimePlatform == Device.iOS)
+            {
                 MainPage = new MainPage();
+            }   
+                
             else
-                MainPage = new NavigationPage(new MainPage());
+            {
+                if (preferences.getAppUnlocked().Equals("true")){
+                    MainPage = new NavigationPage(new PwCalcPage());
+                }
+                else{
+                    MainPage = new NavigationPage(new UnlockPage());
+                }
+
+            }
+                
         }
-
-
-
     }
 }

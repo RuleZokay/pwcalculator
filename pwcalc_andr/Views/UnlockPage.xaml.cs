@@ -31,8 +31,6 @@ namespace pwcalc_andr
 				RequestText.IsVisible = false;
 				
 			}
-
-
 		}
 
         private async void unlock_Click(object sender, EventArgs args)

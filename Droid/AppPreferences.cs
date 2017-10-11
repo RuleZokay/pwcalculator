@@ -22,7 +22,6 @@ namespace pwcalc_andr.Droid
             mPrefsEditor = mSharedPrefs.Edit();
         }
 
-
         public void saveUserEmail(string key){
             mPrefsEditor.PutString(PREFERENCE_USER_EMAIL,key);
             mPrefsEditor.Commit();
