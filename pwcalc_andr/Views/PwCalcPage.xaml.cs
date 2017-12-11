@@ -24,7 +24,6 @@ namespace pwcalc_andr
 
             }
 
-
 		if (preferences.getAppUnlocked().Equals("true"))
 		{
                 TextBoxNumber.IsEnabled = true;
@@ -32,8 +31,6 @@ namespace pwcalc_andr
 		}
 
         }
-
-	    	
 
 		public string InputText
         {
@@ -56,13 +53,11 @@ namespace pwcalc_andr
 
 			}
 
-
             else{
             return TextBoxPassword.Text = "Bitte eine Zahl eingeben!!!";
 			}
 
          }
-
         public void EnableAllObjects(){
             TextBoxNumber.IsEnabled = true;
             ButtonCalc.IsEnabled = true;

@@ -8,13 +8,14 @@ namespace pwcalc_andr
     {
         public static bool UseMockDataStore = true;
         public static string BackendUrl = "https://localhost:5000";
-
+      
         public App()
         {
-
+            
 
 
             InitializeComponent();
+
             Context mContext = Android.App.Application.Context;
             Droid.AppPreferences preferences = new Droid.AppPreferences(mContext);
 
@@ -40,6 +41,12 @@ namespace pwcalc_andr
 
             }
                 
+        }
+
+        public void SwitchPage()
+        {
+            MainPage = new NavigationPage(new PwCalcPage());
+        
         }
     }
 }

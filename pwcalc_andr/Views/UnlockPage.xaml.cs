@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Android.App;
 using Android.Content;
+using Android.OS;
 using Xamarin.Forms;
 
 
@@ -70,6 +72,13 @@ namespace pwcalc_andr
                 unlocked = validation.isValid(webpin);
 
                 if(unlocked.Equals("true")){
+                    App app = new App();
+                    app.MainPage = new NavigationPage(new PwCalcPage());
+                    app.SwitchPage();
+
+                    //restartActivity(app);
+
+
                     preferences.saveAppUnlocked("true");
 
                     EnableAllObjects();
@@ -77,6 +86,13 @@ namespace pwcalc_andr
 
             }
         }
+
+
+        public static void restartActivity(Activity activity)
+        {
+            activity.Recreate();
+        }
+
 
         public void EnableAllObjects()
         {
