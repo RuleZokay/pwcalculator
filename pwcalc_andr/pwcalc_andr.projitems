@@ -16,7 +16,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\PwCalcPage.xaml.cs">
       <DependentUpon>PwCalcPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Translate.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\UnlockPage.xaml.cs">
       <DependentUpon>UnlockPage.xaml</DependentUpon>
     </Compile>

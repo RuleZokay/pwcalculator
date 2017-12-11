@@ -52,5 +52,23 @@ namespace pwcalc_andr.Droid.Resources.values {
                 return ResourceManager.GetString("UnlockTitle", resourceCulture);
             }
         }
+        
+        public static string NotActivated {
+            get {
+                return ResourceManager.GetString("NotActivated", resourceCulture);
+            }
+        }
+        
+        public static string EnterEmail {
+            get {
+                return ResourceManager.GetString("EnterEmail", resourceCulture);
+            }
+        }
+        
+        public static string UnlockApp {
+            get {
+                return ResourceManager.GetString("UnlockApp", resourceCulture);
+            }
+        }
     }
 }

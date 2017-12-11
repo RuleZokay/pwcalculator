@@ -13,7 +13,7 @@ namespace pwcalc_andr
     public class TranslateExtension : IMarkupExtension
     {
         readonly CultureInfo ci;
-        const string ResourceId = "pwcalc_andr.Droid.values.AppResources";
+        const string ResourceId = "pwcalc_andr.Droid.Resources.values.AppResources";
 
         private static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(() => new ResourceManager(ResourceId
                                                                                                                   , typeof(TranslateExtension).GetTypeInfo().Assembly));

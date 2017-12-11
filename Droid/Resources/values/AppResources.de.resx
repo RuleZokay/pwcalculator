@@ -19,5 +19,18 @@
     <comment>Dieser String wird als Titel in der "Freischalt-Activity" angezeigt.</comment>
     </data>    
 
+    <data name="NotActivated" xml:space="preserve">
+    <value>Die App ist noch nicht freigeschaltet.</value>
+    <comment>Dieser String wird als Titel in der "Freischalt-Activity" angezeigt.</comment>
+    </data>
 
+    <data name="EnterEmail" xml:space="preserve">
+    <value>Bitte Email eingeben</value>
+    <comment>Dieser String wird als Titel in der "Freischalt-Activity" angezeigt.</comment>
+    </data>
+
+    <data name="UnlockApp" xml:space="preserve">
+    <value>App Freischalten</value>
+    <comment>Dieser String wird als Titel in der "Freischalt-Activity" angezeigt.</comment>
+    </data>
 </root>
