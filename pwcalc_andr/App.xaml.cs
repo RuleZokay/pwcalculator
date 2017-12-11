@@ -20,10 +20,7 @@ namespace pwcalc_andr
             Droid.AppPreferences preferences = new Droid.AppPreferences(mContext);
 
 
-            if (UseMockDataStore)
-                DependencyService.Register<MockDataStore>();
-            else
-                DependencyService.Register<CloudDataStore>();
+           
 
             if (Device.RuntimePlatform == Device.iOS)
             {
