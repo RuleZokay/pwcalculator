@@ -21,6 +21,7 @@
       <DependentUpon>UnlockPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)PlatformCulture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TranslateExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
