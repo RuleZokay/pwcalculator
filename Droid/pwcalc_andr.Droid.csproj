@@ -134,6 +134,10 @@
     <Compile Include="WebService.cs" />
     <Compile Include="Validation.cs" />
     <Compile Include="AppPreferences.cs" />
+    <Compile Include="Resources\values\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localize.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png" />
@@ -152,6 +156,14 @@
     <AndroidResource Include="Resources\drawable-hdpi\checked.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\checked.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\values\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\values\AppResources.en.resx" />
+    <EmbeddedResource Include="Resources\values\AppResources.de.resx" />
   </ItemGroup>
   <Import Project="..\pwcalc_andr\pwcalc_andr.projitems" Label="Shared" Condition="Exists('..\pwcalc_andr\pwcalc_andr.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

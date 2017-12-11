@@ -20,6 +20,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\UnlockPage.xaml.cs">
       <DependentUpon>UnlockPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)PlatformCulture.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />

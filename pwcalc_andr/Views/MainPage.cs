@@ -1,13 +1,21 @@
 ﻿using System;
-
+using System.Globalization;
+using pwcalc_andr.Droid.Resources.values;
 using Xamarin.Forms;
 
 namespace pwcalc_andr
 {
     public class MainPage : TabbedPage
     {
+        
+
+
+       
+
+
         public MainPage()
         {
+            
             Page pwcalcPage = null; 
             Page unlockPage = null;
 
@@ -33,7 +41,8 @@ namespace pwcalc_andr
 
                     unlockPage = new UnlockPage()
                     {
-                        Title = "Unlock App"
+                        
+                        Title = AppResources.UnlockTitle
                     };
                     break;
             }

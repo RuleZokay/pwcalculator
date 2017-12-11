@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
+using pwcalc_andr.Droid.Resources.values;
 using Xamarin.Forms;
 
 
@@ -19,6 +20,7 @@ namespace pwcalc_andr
         public UnlockPage()
         {
             InitializeComponent();
+            Title = AppResources.UnlockTitle;
 			Context mContext = Android.App.Application.Context;
 			Droid.AppPreferences preferences = new Droid.AppPreferences(mContext);
             if (preferences.getFirstRegister().Equals("true")){
