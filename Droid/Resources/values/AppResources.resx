@@ -13,26 +13,55 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 
-<data name="UnlockTitle" xml:space="preserve">
+    <data name="UnlockTitle" xml:space="preserve">
     <value>App Freischalten</value>
     <comment>Dieser String wird als Titel in der "Freischalt-Activity" angezeigt.</comment>
     </data>    
 
     <data name="NotActivated" xml:space="preserve">
-    <value>App Freischalten</value>
-    <comment>Dieser String wird als Titel in der "Freischalt-Activity" angezeigt.</comment>
+    <value>The app is not activated</value>
+    <comment>Dieser String signalisiert, dass die app nicht freigeschaltet ist.(UnlockPage)</comment>
     </data>
 
+    <data name="Activated" xml:space="preserve">
+    <value>Die App ist freigeschaltet :)</value>
+    <comment>Dieser String signalisiert, dass die app freigeschaltet ist.(UnlockPage)</comment>
+    </data>
+    
     <data name="EnterEmail" xml:space="preserve">
-    <value>App Freischalten</value>
-    <comment>Dieser String wird als Titel in der "Freischalt-Activity" angezeigt.</comment>
+    <value>Please enter an Email-Adress</value>
+    <comment>Eingabefeld für die Email.(UnlockPage)</comment>
     </data>
 
     <data name="UnlockApp" xml:space="preserve">
-    <value>App Freischalten</value>
-    <comment>Dieser String wird als Titel in der "Freischalt-Activity" angezeigt.</comment>
+    <value>unlock app</value>
+    <comment>Button für das Freischalten.(UnlockPage)</comment>
     </data>
 
+    <data name="RequestMessage" xml:space="preserve">
+    <value>Your request was sent. Please wait for the activation of your app. Try again later...</value>
+    <comment>Label für die Eingabe.(PWCalcPage)</comment>
+    </data>
 
-   
+    <data name="LabelInput" xml:space="preserve">
+    <value>Input</value>
+    <comment>Label für die Eingabe.(PWCalcPage)</comment>
+    </data>
+
+    <data name="InputField" xml:space="preserve">
+    <value>Please enter the number</value>
+    <comment>Eingabefeld für die Nummer.(PWCalcPage)</comment>
+    </data>
+
+    <data name="CalculateBtn" xml:space="preserve">
+    <value>Calculate</value>
+    <comment>Button für das Berechnen.(PWCalcPage)</comment>
+    </data>
+
+    <data name="LabelPassword" xml:space="preserve">
+    <value>Password</value>
+    <comment>Label für das Passwort.(PWCalcPage)</comment>
+    </data>
+
+       
 </root>

@@ -3634,6 +3634,9 @@ namespace pwcalc_andr.Droid
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f09003e
+			public const int ActivatedApp = 2131296318;
+			
 			// aapt resource value: 0x7f090015
 			public const int abc_action_bar_home_description = 2131296277;
 			

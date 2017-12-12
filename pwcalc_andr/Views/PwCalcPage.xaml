@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="pwcalc_andr.PwCalcPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="pwcalc_andr.PwCalcPage"
+    xmlns:i18n="clr-namespace:pwcalc_andr;assembly=pwcalc_andr.Droid">
 <ContentPage.Title>PasswordCalculator</ContentPage.Title>
     <ContentPage.Content>
        <StackLayout Padding = "30,30,30,30">
-            <Label Text="Eingabe" XAlign="Center" ></Label>
-            <Entry Placeholder="Bitte Nummer eingeben" IsEnabled="false" HorizontalTextAlignment ="Center" x:Name="TextBoxNumber" Keyboard="Numeric"></Entry>
-            <Button Text="Berechnen"  x:FieldModifier = "public" x:Name="ButtonCalc"  IsEnabled="false" Clicked="Berechnen_Click"></Button>
-            <Label Text="Passwort" XAlign="Center"></Label>
+            <Label Text="{i18n:Translate LabelInput}" XAlign="Center" ></Label>
+            <Entry Placeholder="{i18n:Translate InputField}" IsEnabled="false" HorizontalTextAlignment ="Center" x:Name="TextBoxNumber" Keyboard="Numeric"></Entry>
+            <Button Text="{i18n:Translate CalculateBtn}"  x:FieldModifier = "public" x:Name="ButtonCalc"  IsEnabled="false" Clicked="Berechnen_Click"></Button>
+            <Label Text="{i18n:Translate LabelPassword}" XAlign="Center"></Label>
             <Entry Placeholder="" x:Name="TextBoxPassword" IsEnabled="false" HorizontalTextAlignment ="Center"></Entry>
 
         </StackLayout>

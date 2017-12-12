@@ -40,6 +40,7 @@
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <AndroidTlsProvider>btls</AndroidTlsProvider>
+    <AndroidSupportedAbis>armeabi-v7a;x86</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -157,6 +158,9 @@
     <AndroidResource Include="Resources\drawable-hdpi\checked.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\checked.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\checked.png" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\values-de\Strings.xml" />
+    <AndroidResource Include="Resources\values-en\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\values\AppResources.resx">
@@ -165,6 +169,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\values\AppResources.en.resx" />
     <EmbeddedResource Include="Resources\values\AppResources.de.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\values-de\" />
+    <Folder Include="Resources\values-en\" />
   </ItemGroup>
   <Import Project="..\pwcalc_andr\pwcalc_andr.projitems" Label="Shared" Condition="Exists('..\pwcalc_andr\pwcalc_andr.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

@@ -59,6 +59,12 @@ namespace pwcalc_andr.Droid.Resources.values {
             }
         }
         
+        public static string Activated {
+            get {
+                return ResourceManager.GetString("Activated", resourceCulture);
+            }
+        }
+        
         public static string EnterEmail {
             get {
                 return ResourceManager.GetString("EnterEmail", resourceCulture);
@@ -68,6 +74,36 @@ namespace pwcalc_andr.Droid.Resources.values {
         public static string UnlockApp {
             get {
                 return ResourceManager.GetString("UnlockApp", resourceCulture);
+            }
+        }
+        
+        public static string RequestMessage {
+            get {
+                return ResourceManager.GetString("RequestMessage", resourceCulture);
+            }
+        }
+        
+        public static string LabelInput {
+            get {
+                return ResourceManager.GetString("LabelInput", resourceCulture);
+            }
+        }
+        
+        public static string InputField {
+            get {
+                return ResourceManager.GetString("InputField", resourceCulture);
+            }
+        }
+        
+        public static string CalculateBtn {
+            get {
+                return ResourceManager.GetString("CalculateBtn", resourceCulture);
+            }
+        }
+        
+        public static string LabelPassword {
+            get {
+                return ResourceManager.GetString("LabelPassword", resourceCulture);
             }
         }
     }

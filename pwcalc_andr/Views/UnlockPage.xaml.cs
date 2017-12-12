@@ -1,5 +1,7 @@
 ﻿using System;
+
 using System.Threading.Tasks;
+using Android;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -99,7 +101,7 @@ namespace pwcalc_andr
         public void EnableAllObjects()
         {
 			CrossImage.Source = "checked.png";
-            ImageText.Text = "Die App ist freigeschaltet!";
+            ImageText.Text = AppResources.Activated;
             RequestText.IsVisible = false;
 		}
 
