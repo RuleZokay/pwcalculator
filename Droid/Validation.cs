@@ -18,7 +18,6 @@ namespace pwcalc_andr.Droid
 
             if(validation.Equals("true")){
                 preferences.saveAppUnlocked("true");
-
             }
 
             return validation;

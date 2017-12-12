@@ -11,7 +11,6 @@ namespace pwcalc_andr
         public static bool UseMockDataStore = true;
         public static string BackendUrl = "https://localhost:5000";
       
-
         public interface ILocalize
         {
             CultureInfo GetCurrentCultureInfo();
@@ -33,9 +32,6 @@ namespace pwcalc_andr
 
             Context mContext = Android.App.Application.Context;
             Droid.AppPreferences preferences = new Droid.AppPreferences(mContext);
-
-
-           
 
             if (Device.RuntimePlatform == Device.iOS)
             {

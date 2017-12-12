@@ -10,8 +10,6 @@ namespace pwcalc_andr.Droid
     public class WebService
     {
         public string usermail = "N/A";
-        //Register: Method put : http://de-sg-t2t.technotrans.lan:1903/app/pwcalc/register/<app_id>/schroeder@technotrans.de
-        //Isvalid: Method get: http://de-sg-t2t.technotrans.lan:1903/app/pwcalc/isvalid/<app_id>/<app_pin>
 
         public static string username = "test";
         public static string password = "test";
@@ -20,8 +18,6 @@ namespace pwcalc_andr.Droid
         public async Task<string> getWebPin()
         {
             {
-
-            //UnlockPage SecondPage = new UnlockPage();
 
             System.Net.ServicePointManager.DefaultConnectionLimit = 100;
             System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
