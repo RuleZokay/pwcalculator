@@ -9,7 +9,6 @@
     <Import_RootNamespace>pwcalc_andr</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -21,6 +20,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)PlatformCulture.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TranslateExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />

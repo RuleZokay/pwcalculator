@@ -54,7 +54,11 @@ namespace pwcalc_andr
         public void SwitchPage()
         {
             MainPage = new NavigationPage(new PwCalcPage());
-        
         }
+
+        public void restart(){
+                    
+        }
+
     }
 }

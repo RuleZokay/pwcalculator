@@ -7,16 +7,11 @@ namespace pwcalc_andr
 {
     public class MainPage : TabbedPage
     {
-        
-
-
-       
-
 
         public MainPage()
         {
-            
-            Page pwcalcPage = null; 
+
+            Page pwcalcPage = null;
             Page unlockPage = null;
 
             switch (Device.RuntimePlatform)
@@ -27,7 +22,8 @@ namespace pwcalc_andr
                         Title = "Password-Calculator"
                     };
 
-                    unlockPage = new NavigationPage(new UnlockPage()){
+                    unlockPage = new NavigationPage(new UnlockPage())
+                    {
                         Title = "Unlock App"
                     };
                     pwcalcPage.Icon = "tab_feed.png";
@@ -41,7 +37,7 @@ namespace pwcalc_andr
 
                     unlockPage = new UnlockPage()
                     {
-                        
+
                         Title = AppResources.UnlockTitle
                     };
                     break;

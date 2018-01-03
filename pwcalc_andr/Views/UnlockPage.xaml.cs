@@ -19,6 +19,7 @@ namespace pwcalc_andr
         public PwCalcPage pwcalcpage = new PwCalcPage();
         public String webpin = "";
         String unlocked;
+       
         public UnlockPage()
         {
             InitializeComponent();
@@ -82,7 +83,6 @@ namespace pwcalc_andr
 
                     //restartActivity(app);
 
-
                     preferences.saveAppUnlocked("true");
 
                     EnableAllObjects();
@@ -91,19 +91,19 @@ namespace pwcalc_andr
             }
         }
 
-
         public static void restartActivity(Activity activity)
         {
             activity.Recreate();
         }
 
-
         public void EnableAllObjects()
         {
+            App app = new App();
 			CrossImage.Source = "checked.png";
             ImageText.Text = AppResources.Activated;
             RequestText.IsVisible = false;
-		}
+            app.MainPage = new NavigationPage(new PwCalcPage());		
+        }
 
     }
 }

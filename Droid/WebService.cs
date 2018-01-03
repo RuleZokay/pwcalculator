@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace pwcalc_andr.Droid
 {
+    
     public class WebService
     {
         public string usermail = "N/A";
@@ -39,8 +40,6 @@ namespace pwcalc_andr.Droid
             wc.Dispose();
         }
             return resultpin;
-        
-    
         }
 
         public String getValidation(String webpin){
@@ -72,9 +71,5 @@ namespace pwcalc_andr.Droid
                 usermail = value;
             }
         }
-
-        
-
-
     }
 }
